@@ -1,0 +1,92 @@
+<!doctype html>
+<html ng-app="plunker">
+  <head>
+
+<script src="/external/angularjs/angular.min.js"></script>
+<script src="/external/ui-bootstrap/ui-bootstrap-tpls-0.6.0.min.js"></script>
+<script src="/loginController.js"></script>
+<style>
+form {
+    border: 3px solid #f1f1f1;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 8px 8px 8px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+}
+
+</style>
+<link href="/external/ui-bootstrap/bootstrap.css" rel="stylesheet">
+  </head>
+  <body>
+  
+  
+<div ng-controller="ModalCtrl">
+    <script type="text/ng-template" id="myPassContent.html">
+        <div class="modal-header">
+            <h3>New Password</h3>
+        </div>
+        <div class="modal-body">
+            <p>
+            	<label><b>Old Password</b></label>
+    			<input type="password" ng-model="pass.old"><br>
+    		</p>
+            <p>
+            	<label><b>New Password</b></label>
+    			<input type="password" ng-model="pass.newp1"><br>
+    		</p>
+            <p>
+            	<label><b>Confirm Password</b></label>
+    			<input type="password" ng-model="pass.newp2"><br>
+   			</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="okPass()">OK</button>
+            <button class="btn btn-warning" ng-click="cancelPass()">Cancel</button>
+        </div>
+    </script>
+    
+  <center><font color="red"> <b> {{message}} </b> </font></center>
+  <form novalidate>
+        <label><b>Username</b></label>
+    <input type="text" ng-model="user.name"><br>
+       <label><b>Password</b></label>
+    <input type="password" ng-model="user.pass">
+    <button ng-click="logMeIn()">LogIn</button>
+    <hr>
+    <button  ng-click="open()">Change Password</button>
+  </form>
+
+<div ng-show="selected">Selection from a modal: {{ selected }}</div>
+</div>
+
+
+</body>
+</html>

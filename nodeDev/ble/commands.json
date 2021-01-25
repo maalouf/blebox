@@ -1,0 +1,42 @@
+{
+	"serial"	:	{
+						"command"	:	"aa2ccc",
+						"attrib_name"	:	["NumeroSerie"]
+					},
+	"compteur"	:	{
+						"command"	:	"aa30cc",
+						"attrib_name"	:	["NomBadge","NbHeureMoteur","NbHeureTontes","NbHeureRoulage","NbVidangePanier"]
+					},
+	"vibrationU0"	:	{
+						"command"	:	"aa3230cc",
+						"attrib_name"	:	["Utilisateur0","PointsVibrationsU0","DureeVibrationsU0"]
+					},
+	"vibrationU1"	:	{
+						"command"	:	"aa3231cc",
+						"attrib_name"	:	["Utilisateur1","PointsVibrationsU1","DureeVibrationsU1"]
+					},
+	"vibrationU2"	:	{
+						"command"	:	"aa3232cc",
+						"attrib_name"	:	["Utilisateur2","PointsVibrationsU2","DureeVibrationsU2"]
+					},
+					
+	"vibrationU3"	:	{
+						"command"	:	"aa3233cc",
+						"attrib_name"	:	["Utilisateur3","PointsVibrationsU3","DureeVibrationsU3"]
+					},
+					
+	"vibrationU4"	:	{
+						"command"	:	"aa3234cc",
+						"attrib_name"	:	["Utilisateur4","PointsVibrationsU4","DureeVibrationsU4"]
+					},
+					
+	"embrayage"	:	{
+						"command"	:	"aa35cc",
+						"attrib_name"	:	["NbCycleEmbrayage"]
+					},
+	"surface"	:	{
+						"command"	:	"aa36cc",
+						"attrib_name"	:	["SuperficieTonte"]
+					}
+					
+}

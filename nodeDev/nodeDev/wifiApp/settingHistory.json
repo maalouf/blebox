@@ -1,0 +1,14 @@
+{
+    "wifi": {
+        "ssid": "DIGIT-PRIME",
+        "password": "7C7DF5A67E724969425CED4F293942"
+    },
+    "lan": {
+        "type": "static",
+        "ip_adr": "196.128.2.68",
+        "netmask": "255.255.255.0",
+        "gateway": "196.128.2.1",
+        "broadcast": "196.128.2.255",
+        "dns": "196.128.2.1"
+    }
+}

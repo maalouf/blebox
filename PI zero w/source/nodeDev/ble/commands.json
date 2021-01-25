@@ -1,0 +1,52 @@
+{
+	
+
+	"compteur"	:	{
+						"command"	:	"aa30cc",
+						"attrib_name"	:	["NomBadge","NbHeureMoteur","NbHeureTontes","NbHeureRoulage","NbVidangePanier"]
+					},
+	"vibrationU0"	:	{
+						"command"	:	"aa3230cc",
+						"attrib_name"	:	["Utilisateur0","PointsVibrationsU0","DureeVibrationsU0"]
+					},
+	"vibrationU1"	:	{
+						"command"	:	"aa3231cc",
+						"attrib_name"	:	["Utilisateur1","PointsVibrationsU1","DureeVibrationsU1"]
+					},
+	"vibrationU2"	:	{
+						"command"	:	"aa3232cc",
+						"attrib_name"	:	["Utilisateur2","PointsVibrationsU2","DureeVibrationsU2"]
+					},
+					
+	"vibrationU3"	:	{
+						"command"	:	"aa3233cc",
+						"attrib_name"	:	["Utilisateur3","PointsVibrationsU3","DureeVibrationsU3"]
+					},
+					
+	"vibrationU4"	:	{
+						"command"	:	"aa3234cc",
+						"attrib_name"	:	["Utilisateur4","PointsVibrationsU4","DureeVibrationsU4"]
+					},
+					
+	"embrayage"	:	{
+						"command"	:	"aa35cc",
+						"attrib_name"	:	["NbCycleEmbrayage"]
+					},
+	"surface"	:	{
+						"command"	:	"aa36cc",
+						"attrib_name"	:	["SuperficieTonte"]
+					},
+					
+	"maintenance": {
+						"command"  :  "aa3ccc",
+						"attrib_name" : ["NbMaintenance","BesoinsMaintenance","Maintenance11","Maintenance12","Maintenance13","CompteurMaintenance1",
+						"Maintenance21","Maintenance22","Maintenance23","CompteurMaintenance2",
+						"Maintenance31","Maintenance32","Maintenance33","CompteurMaintenance3"],
+						
+						"hooks" : [{"type" : "delete", "input": "Maintenance11"},{"type" : "delete", "input": "Maintenance12"},{"type" : "delete", "input": "Maintenance13"},
+								   {"type" : "delete", "input": "Maintenance21"},{"type" : "delete", "input": "Maintenance22"},{"type" : "delete", "input": "Maintenance23"},
+						           {"type" : "delete", "input": "Maintenance31"},{"type" : "delete", "input": "Maintenance32"},{"type" : "delete", "input": "Maintenance33"},
+						           {"type" : "delete", "input": "CompteurMaintenance1"}, {"type" : "delete", "input": "CompteurMaintenance2"}, {"type" : "delete", "input": "CompteurMaintenance3"}]
+				   }
+					
+}

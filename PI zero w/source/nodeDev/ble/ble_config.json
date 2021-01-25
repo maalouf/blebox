@@ -1,0 +1,20 @@
+{
+    "scanningTime": 5000,
+    "scanningPeriode": 30000,
+    "obsoletTimeOut": 5000,
+    "timeSpan": {
+        "active": false,
+        "start": {
+            "hour": "1",
+            "min": "1"
+        },
+        "stop": {
+            "hour": "1",
+            "min": "1"
+        }
+    },
+    "timeZone": {
+        "continant": "Europe",
+        "place": "Paris"
+    }
+}

@@ -1,0 +1,76 @@
+<!doctype html>
+<html ng-app="configSet">
+ <head>
+<script src="/external/angularjs/angular.min.js"></script>
+<script src="/settingsController.js"></script>
+<style>
+form  { display: table;      }
+p     { display: table-row;  }
+label { display: table-cell; }
+input { display: table-cell; }
+button {display: table-cell; }
+
+
+</style>
+ </head>
+ <body>
+<div ng-controller="settingsController">
+  <center><font color="red"> <b> Application Settings </b></font></center> <br> <br>
+  <center>
+  <form novalidate>
+  <p>
+        <label><b>Scanning Period <i>(how often the scan will be performed)</i>:&#09;</b></label>
+    	<input type="number" name="scanp_h" string-to-number ng-model="scan.period.hour"  min="0" max="59" required> hour
+    	<input type="number" name="scanp_m" string-to-number ng-model="scan.period.min" min="0" max="59"> min
+    	<input type="number" name="scanp_s"  string-to-number ng-model="scan.period.sec" min="0" max="59"> sec <br><br>
+  </p><p>
+   		        <label><b>Scanning Time: <i> (the time spent for pure device scan) </i></b></label>
+    	<input type="number" name="scans_m" string-to-number ng-model="scan.sweep.min" min="0" max="59"> min
+    	<input type="number" name="scans_s" string-to-number ng-model="scan.sweep.sec" min="0" max="59"> sec <br><br>
+   </p><p>
+    	<label><b>Timed out device: <i>(timeout for an omnipresent device)</i></b></label>
+    	<input type="number" name="scand_h" string-to-number ng-model="scan.device.hour" min="0" max="59"> hour
+    	<input type="number" name="scand_m" string-to-number ng-model="scan.device.min" min="0" max="59"> min
+    	<input type="number" name="scand_s" string-to-number ng-model="scan.device.sec" min="0" max="59"> sec <br><br>
+    </p>
+    <br> <hr> <br>
+    <p>
+    	<label for="repeatSelect"> Time Zone: </label>
+    	<select name="zoneSelect" id="zoneSelect" ng-model="data.continant">
+     		<option ng-repeat="option in zone.master" value="{{option}}">{{option}}</option>
+    	</select>
+    	 	<label for="repeatSelect"> City: </label>
+    	<select name="zoneSelectv" id="zoneSelectv" ng-model="data.city">
+     		<option ng-repeat="option in zone[data.continant]" value="{{option}}">{{option}}</option>
+    	</select>
+    </p>	
+        <br> <hr> <br>
+	<p>
+		<label> Quiet Time Range: </label>
+		 <input type="checkbox" ng-model="quiet.active">
+		 <p>
+        	<label><b>Start:</b></label>
+    		<input type="number" ng-disabled="!quiet.active" name="start_h" string-to-number ng-model="quiet.start.hour"  min="0" max="23" required>H
+    		<input type="number" ng-disabled="!quiet.active" name="start_m" string-to-number ng-model="quiet.start.min" min="0" max="59"> min
+    		<br><br>
+  		</p>
+		 <p>
+        	<label><b>Stop:</b></label>
+    		<input type="number" ng-disabled="!quiet.active" name="stop_h" string-to-number ng-model="quiet.stop.hour"  min="0" max="23" required>H
+    		<input type="number" ng-disabled="!quiet.active" name="stop_m" string-to-number ng-model="quiet.stop.min" min="0" max="59"> min
+    		<br><br>
+  		</p>
+	</p>
+		
+
+          
+    	
+	<p><center>
+	<br><br>
+    <button ng-click="ok()">OK</button>
+    <button ng-click="cancel()">Cancel</button></center></p>
+  </form>
+  </center>
+</div>
+</body>
+</html>

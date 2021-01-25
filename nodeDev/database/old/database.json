@@ -1,0 +1,18 @@
+{
+	"example" : {
+		"apiKey"	: "AIzaSyDEUF9X57XZvIdQLm-ouHxmWmgs652q99Q",
+		"authDomain"	: "mower-example.firebaseapp.com",
+		"databaseURL"	: "https://mower-example.firebaseio.com",
+		"storageBucket"	: "mower-example.appspot.com",
+		"messagingSenderId"	: "659986280352"
+	},
+	"etesia" : {
+		"apiKey"	: "AIzaSyDYkOSPkIF89HvF5R9ky8ytrH5P8m9s0zY",
+    	"authDomain"	: "etesia-febe7.firebaseapp.com",
+    	"databaseURL"	: "https://etesia-febe7.firebaseio.com",
+    	"storageBucket"	: "etesia-febe7.appspot.com",
+    	"messagingSenderId"	: "102700225056"
+    }
+		
+}
+

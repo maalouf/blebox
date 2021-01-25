@@ -1,0 +1,42 @@
+<!doctype html>
+<html ng-app="config">
+ <head>
+<script src="/external/angularjs/angular.min.js"></script>
+<script src="/confAPController.js"></script>
+<style>
+form  { display: table;      }
+p     { display: table-row;  }
+label { display: table-cell; }
+input { display: table-cell; }
+
+</style>
+ </head>
+ <body>
+<div ng-controller="confAPController">
+  <center><font color="red"> <b> Access Point Configuration </b> <br> Restart will be required when changed </font></center> <br> <br>
+    <center>
+  <form novalidate>
+  <p>
+        <label><b>SSID:&#09;</b></label>
+    	<input type="text" ng-model="ap.ssid"><br><br>
+  </p><p>
+   		<label><b>Password:&#09;&#09; </b></label>
+    	<input type="text" ng-model="ap.pass"><br><br>
+   </p>
+    	<hr><br>
+    	<p>
+    	<label><b>IP address</b></label>
+    	<input type="text" ng-model="ap.ip"><br><br></p>
+    	<p><label><b>Net Mask</b></label>
+    	<input type="text" ng-model="ap.net"><br><br></p>
+
+    	<p><label><b>Server Port</b></label>
+    	<input type="text" ng-model="ap.port"><br><br></p>
+	<p><center>
+    <button ng-click="ok()">OK</button>
+    <button ng-click="cancel()">Cancel</button></center></p>
+  </form>
+  </center>
+</div>
+</body>
+</html>

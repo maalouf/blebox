@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<meta charset="utf-8"/>
+		<link href="style.css" rel="stylesheet" />
+		<script src="/external/angularjs/angular.min.js"></script>
+		<script src="/choiceController.js"></script>
+		
+	</head>
+	<br><br>
+	<center><font color="black" size="12"> <b> What you want to do </b> </font></center>
+	<body ng-app='choice' ng-controller="choiceCtrl">
+		<nav class="{{active}}" ng-click="$event.preventDefault()">
+			<a href="#" class="home" ng-click="bt1click()">Set Wifi</a>
+			<a href="#" class="about" ng-click="bt4click()">Set Ethernet</a>
+			<a href="#" class="contact" ng-click="bt3click()">Wifi AP config</a>
+			<a href="#" class="about" ng-click="bt2click()">APP Settings</a>
+		</nav>
+		<p ng-show="active">You chose <b>{{active}}</b></p>
+	
+	</body>
+</html>

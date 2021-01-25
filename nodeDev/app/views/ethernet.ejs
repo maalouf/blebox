@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-radio-input-directive-production</title>
+  
+
+<script src="/external/angularjs/angular.min.js"></script>
+  
+<script src="/confLANController.js"></script>
+  
+  <style>
+form  { display: table;      }
+p     { display: table-row;  }
+label { display: table-cell; 
+
+    padding-right:20px;}
+    
+input { display: table-cell; }
+
+</style>
+ </head>
+ <body ng-app="radioExample"> <center>
+  <form ng-controller="ExampleController">
+  
+ <font color="red" size="10"> <b> Ethernet Configuration </b> </font> <br><br>
+  
+   <p><label><b>Configuration type:</b></label>
+   <label>DHCP </label> 
+   <input type="radio" ng-model="type" value="false"><label></label>
+   <label>Static </label>
+   <input type="radio" ng-model="type" value="true"></p><br>
+  
+  <hr><br> <div ng-show="type == 'true'">
+  <p>
+ 		<label><b>IP address</b></label><span style="display:inline-block; width: 100;"></span>
+    	<input type="text" ng-model="lan.ip_adr"><br><br></p>
+    	<p><label><b>Net Mask</b></label>
+    	<input type="text" ng-model="lan.netmask"><br><br></p>
+		<p><label><b>Gateway</b></label>
+    	<input type="text" ng-model="lan.gateway"><br><br></p>
+    	<p><label><b>BroadCast</b></label>
+    	<input type="text" ng-model="lan.broadcast"><br><br></p>
+    	<p><label><b>DNS</b></label>
+    	<input type="text" ng-model="lan.dns"><br><br></p>
+  </div>
+  	<p><center>
+    <button ng-click="ok()">OK</button>
+    <button ng-click="cancel()">Cancel</button></center></p>
+  </form>
+  </center>
+  	
+
+  </form>
+  </center>
+
+</body>
+</html>
+  
+  
